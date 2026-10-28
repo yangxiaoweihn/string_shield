@@ -1,0 +1,8 @@
+builders:
+  obfuscate:
+    import: "package:string_shield/string_shield/generator/builder.dart"
+    builder_factories: ["obfuscateBuilder"]
+    build_extensions: {".dart": [".obfuscate.g.part"]}
+    auto_apply: dependents
+    build_to: source
+    applies_builders: ["source_gen|combining_builder"]
